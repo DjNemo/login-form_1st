@@ -1,0 +1,357 @@
+:root {
+    --primary:#2b805a;
+    --primary-light: #81D4FA;
+    --primary-disabled:#A5D6A7;
+    --primary-lighter:#DCEDC8;
+    --secondary:#1D1D1D;
+    --text:#11181C;
+    --text-gray:#757575;
+    --text-placeholder:#BDBDBD;
+    --border: #F9FBE7;
+    --btn-bg:#FFF8E1;
+    --input-bg:#F1F2F3; 
+    --main-side-background:#B2EBF2;
+    --error:#E53935;
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    height: 100vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+.nav {
+    background-color: #B2EBF2;
+    color: #5D76A9;
+    text-align: center;
+}
+
+.nav ul li {
+    display: inline-flex;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px 15px;
+    width: 75px;
+    background-color: #F0F8FF;
+    border: 2px solid transparent;
+    transition-duration: 0.5s;
+}
+
+.nav ul li:hover{
+    border-color: #A3C1AD;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+
+*::selection {
+    background-color: var(
+        --primary-light
+    );
+}
+
+.socials-row {
+    display: flex;
+}
+
+.github-button {
+    background-color: #B2EBF2;
+    display: flex;
+    border: none
+}
+
+.github-link {
+    text-decoration: none;
+}
+
+.socials-row img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.socials-row>a {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    min-height: 2.75rem;
+    display: flex;
+    gap: 0.75rem;
+    color: var(--text);
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--text);
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    transition: all .3s ease;
+    box-shadow: rgba(99, 99, 99, 0.2)0px 1px 4px 0px;
+}
+
+.socials-row>a svg {
+    color: var(--text)
+}
+
+.socials-row{
+    border: 2px solid black;
+}
+
+.socials-row>a:hover {
+    background-color: var(--btn-bg);
+}
+
+.form-welcome-row {
+    margin-bottom: 1rem;
+}
+
+.sign-in {
+    text-decoration: none;
+}
+
+.form-welcome-row h1 {
+    color: 	var(--text);
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: normal;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.form-welcome-row h2 {
+    color: var(--text-gray);
+    font-size: 1.10rem;
+    font-weight: normal;
+}
+
+.divider {
+    display: flex;
+    flex-direction: row;
+    color: var(--secondary);
+    gap: 16px;
+    align-items: center;
+}
+
+.divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary);
+    opacity: .2;
+}
+
+.form-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 6fr 5fr;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.form-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: var(--main-side-background);
+    box-shadow: rgba(99, 99, 99, 010)3px 2px 2px -1px;
+}
+
+.logo {
+    height: 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap: 1.25rem;
+    max-width: 23rem;
+    width: 100%;
+}
+
+.my-form__button {
+    background-color: var(--primary);
+    border: 1px solid var(--primary-light);
+    color: white;
+    white-space: nowrap;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    line-height: 2.75rem;
+    outline: none;
+    font-size: 1.125rem;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+    transition: all .3s ease;
+}
+
+.my-form:invalid .my-form__button {
+    pointer-events: none;
+    background-color: var(--primary-disabled);
+    border: 1px solid var(--primary-light);
+}
+
+.my-form__actions {
+    display: flex;
+    flex-direction: column;
+    color: var(--secondary);
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.my-form__actions a {
+    color: var(--text);
+}
+
+.my-form__actions a:hover {
+    color: var(--text-gray);
+    text-decoration: underline;
+}
+
+.my-form__row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4px;
+    border: 0.5px solid #E0E0E0;
+    border-radius: 5px;
+    background-color: #DCEDC8;
+}
+
+.new-account{
+    text-decoration: none;
+    font-weight: 100;
+    color: #90A4AE;
+}
+
+.text-field input {
+    color: var(--secondary);
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid var(--border);
+    min-height: 2.75rem;
+    letter-spacing: .03rem;
+    outline: none;
+    background-color: var(--input-bg);
+    transition: .25s;
+    border-radius: 0.5rem;
+    text-indent: 1.25rem;
+}
+
+.text-field label {
+    color: var(--text-gray);
+}
+
+.text-field inpeu:user-invalid {
+    background-color: var(--white);
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+
+.error-message {
+    display: none;
+}
+
+.text-field input:user-invalid
+~.error-message {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    color: var(--error);
+}
+
+.text-field input:focus {
+    border: 1px solid var(--text);
+    box-shadow: rgbs(99, 99, 99, 0.2)0px 1px 4px 0px;
+}
+
+/* aside */
+.info-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.info-side .blockquote-wrapper {
+    gap: 1rem;
+    position: relative;
+    float: right;
+    margin-top: 40px;
+}
+
+.info-side .blockquote-wrapper blockquote {
+    margin-bottom: 1rem;
+    max-width: 30rem;
+    width: 100%;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+}
+
+
+.info-side .blockquote-wrapper blockquote::before {
+    content: open-quote;
+    font-size: 4rem;
+    line-height: 0;
+    margin-right: 0.5rem;
+    position: absolute;
+    left: -1.5rem;
+}
+
+.info-side .author {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.info-side .author img {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.info-side .author-name {
+    font-size: 1.125rem;
+    line-height: 3rem;
+    height: 3rem;
+}
+
+.info-side .author-name {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: var(--text-gray);
+}
+
+@media (max-width: 720px) {
+    .form-wrapper {
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+
+    .info-aside {
+        display: none;
+    }
+}

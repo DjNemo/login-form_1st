@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>Product</li>
+            <li>Gallery</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="form_wrapper">
+        <main class="form-side">
+            <a href="#" title="logo">
+                <img src="https://icongr.am/simple/discogs.svg?size=70&color=ddcd22&colored=false" alt="Nemo" class="logo">
+            </a>
+            <form class="my-form">
+                <div class="form-welcome-row">
+                    <h1>Let's Log in</h1>
+                    <a href="#" class="new-account">Creat new account</a>
+                </div>
+                <div class="social-row">
+                    <a href="https://github.com/" title="Use Github" class="github-link" >
+                        <img src="https://icongr.am/devicon/github-original.svg?size=40&color=currentColor
+                        " alt="github-logo" class="github-logo">
+                        <!-- svg --> <button class="github-button" type="submit">Continue with Github</button>
+                    </a>
+                </div>
+                <div class="divider">
+                    <div class="divider-line"></div>
+                    or
+                    <div class="divider-line"></div>
+                </div>
+                <div class="text-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="off" placeholder="you@example.com" required>
+                    <div class="error-message">Email in incorrect format</div>
+                </div>
+                <div class="text-field">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Your password" title="Minimum 6 characters at least 1 Alphabet and 1 Number" pattern="" required>
+                    <div class="error-message">Minimum 6 characters at least 1 Alphabet and 1 Number</div>
+
+                    <button class="my-form__button" type="submit">Sign up</button>
+                    <div class="my-form__actions">
+                        <div class="my-form__row">
+                            <span>Have an account?</span>
+                            <a href="#" title="Reset Password" class="sign-in">Sign In Now</a>
+                        </div>
+                    </div>
+                </div>
+            </form>            
+        </main>
+        <aside class="info-side">
+            <div class="blockquote-wrapper">
+                <blockquote>
+                    working with Nima is so fun.
+                </blockquote>
+                <div class="author">
+                    <img src="https://icongr.am/devicon/css3-original.svg?size=50&color=currentColor" alt="css-logo" class="css-logo">
+                    <img src="https://icongr.am/devicon/html5-original.svg?size=50&color=currentColor
+                    " alt="html-logo" class="html-logo">
+                    <img src="https://icongr.am/devicon/linkedin-original.svg?size=50&color=currentColor
+                    " alt="linkedin-original">
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
